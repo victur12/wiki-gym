@@ -1,0 +1,8 @@
+{
+  "name": "WikiGym",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "67e6c8c4"
+}

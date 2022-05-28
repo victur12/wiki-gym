@@ -1,17 +1,39 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Calculadora del IMC (Indice de Masa Corporal)
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
+  <ion-content>
+    <div>
+  
+      <ion-list>
+        
+        <ion-item>
+          <ion-label>Peso en kg:</ion-label>
+          <ion-input [(ngModel)]="peso"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>Altura en m:</ion-label>
+          <ion-input [(ngModel)]="altura"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-button (click)="calcular()">Calcular</ion-button>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label>El IMC es: {{resultado}}</ion-label>
+        </ion-item>
+  
+      </ion-list>
+    </div>
+  </ion-content>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
+

@@ -1,0 +1,68 @@
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>Calculadora de Indice de Masa Corporal IMC</ion-label>
+        </ion-list-header>
+
+        <form  [formGroup]="form" (ngSubmit)="calcular()">
+          
+          <!-- input peso -->
+          <ion-item>
+            <ion-label position="floating">Peso(Kg)</ion-label>
+            <ion-input formControlName="Peso" type="number"></ion-input>
+          </ion-item>
+          <!-- mensaje de error peso -->
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Peso?.errors?.required" 
+          color="danger" 
+          class="ion-pading">El peso es un campo requerido
+          </ion-label>
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Peso?.errors?.pattern" 
+          color="danger" 
+          class="ion-pading">Formato invalido
+          </ion-label>
+          <!-- input Estatura -->
+          <ion-item>
+            <ion-label position="floating">Estatura(M)</ion-label>
+            <ion-input formControlName="Estatura" type="number"></ion-input>
+          </ion-item>
+          <!-- mensajes de error Estatura -->
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Estatura?.errors?.required" 
+          color="danger" 
+          class="ion-pading">La estatura es un campo requerido
+          </ion-label>
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Estatura?.errors?.min" 
+          color="danger" 
+          class="ion-pading">La estatura minima debe ser de 0.8 M
+          </ion-label>
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Estatura?.errors?.max" 
+          color="danger" 
+          class="ion-pading">La Estatura máxima debe ser de 2.10 M
+          </ion-label>
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Estatura?.errors?.pattern" 
+          color="danger" 
+          class="ion-pading">Formato invalido
+          </ion-label>
+
+          <ion-button type="submit" expand="block">Listo</ion-button>
+          
+        </form>
+        <ion-item *ngIf="listo">
+          <ion-label 
+          *ngIf="listo"  
+          class="ion-pading"
+          position="center">Tu IMC es de: {{IMC_var | number:'2.1-2' }}
+          </ion-label>
+        </ion-item>
+        
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-grid>

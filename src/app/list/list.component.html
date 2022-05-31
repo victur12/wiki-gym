@@ -1,0 +1,86 @@
+<ion-content>
+  <ion-searchbar showCancelButton="focus"></ion-searchbar>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+         <ion-chip outline color="tertiary">
+            <ion-icon name="barbell-outline"></ion-icon>
+            <ion-label>Muscle</ion-label>
+          </ion-chip>
+         <ion-chip outline color="tertiary">
+          <ion-icon name="accessibility"></ion-icon>
+            <ion-label>High Impact</ion-label>
+          </ion-chip>
+         <ion-chip outline color="tertiary">
+            <ion-icon name="videocam"></ion-icon>
+            <ion-label>Low Impact</ion-label>
+          </ion-chip>
+         <ion-chip outline color="tertiary">
+            <ion-icon name="videocam"></ion-icon>
+            <ion-label>Compund</ion-label>
+          </ion-chip>
+          
+      </ion-col>
+      
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card *ngFor="let excercise of exercises">
+          <ion-card-header >
+            <ion-img [src]="excercise.img"></ion-img>
+            <ion-card-subtitle>{{excercise.type}}</ion-card-subtitle>
+            <ion-card-title>{{excercise.name}}</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content>
+            {{excercise.description}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card *ngFor="let excercise of exercises">
+          <ion-card-header >
+            <ion-img [src]="excercise.img"></ion-img>
+            <ion-card-subtitle>{{excercise.type}}</ion-card-subtitle>
+            <ion-card-title>{{excercise.name}}</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content>
+            {{excercise.description}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+     
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card *ngFor="let excercise of exercises">
+          <ion-card-header >
+            <ion-img [src]="excercise.img"></ion-img>
+            <ion-card-subtitle>{{excercise.type}}</ion-card-subtitle>
+            <ion-card-title>{{excercise.name}}</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content>
+            {{excercise.description}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card *ngFor="let excercise of exercises">
+          <ion-card-header >
+            <ion-img [src]="excercise.img"></ion-img>
+            <ion-card-subtitle>{{excercise.type}}</ion-card-subtitle>
+            <ion-card-title>{{excercise.name}}</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content>
+            {{excercise.description}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+     
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

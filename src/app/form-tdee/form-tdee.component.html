@@ -1,0 +1,150 @@
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>Calculadora de gasto calorico o TDEE</ion-label>
+        </ion-list-header>
+
+        <form  [formGroup]="form" (ngSubmit)="calcular()">
+          <!-- input radius Sexo-->
+          <ion-radio-group value="Sex"  formControlName="SS"  [(ngModel)]="selectedSex">
+            <ion-list-header>
+              <ion-label>Sexo</ion-label>
+            </ion-list-header>
+            <!-- hombre opcion 1 -->
+            <ion-item>
+              <ion-label>Hombre</ion-label>
+              <ion-radio slot="start" value="1"></ion-radio>
+            </ion-item>
+            <!-- mujer opcion 2 -->
+            <ion-item>
+              <ion-label>Mujer</ion-label>
+              <ion-radio slot="start" value="2"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+          <ion-label
+          *ngIf="isSubmitted && errorControl?.SS?.errors?.required" 
+          color="danger" 
+          class="ion-pading">Este es un campo requerido
+        </ion-label>
+        <!-- input radius estilo de vida -->
+          <ion-radio-group formControlName="SL" value="Life" [(ngModel)]="selectedLifeStile">
+            <ion-list-header position="floating">
+              <ion-label>¿Como considera que es su estilo de vida?</ion-label>
+            </ion-list-header>
+            <!-- opcion 1 -->
+            <ion-item>
+              <ion-label>Estilo de vida sedentario o ligero</ion-label>
+              <ion-radio slot="start" value="1"></ion-radio>
+            </ion-item>
+            <!-- opcion 2 -->
+            <ion-item>
+              <ion-label>Estilo de vida activo o moderadamente activo</ion-label>
+              <ion-radio slot="start" value="2"></ion-radio>
+            </ion-item>
+            <!-- opcion 3 -->
+            <ion-item>
+              <ion-label>Estilo de vida muy activo o intenso</ion-label>
+              <ion-radio slot="start" value="3"></ion-radio>
+            </ion-item>
+
+          </ion-radio-group>
+          <!-- error radius -->
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.SL?.errors?.required" 
+          color="danger" 
+          class="ion-pading">Este es un campo requerido
+          </ion-label>
+          <!-- input peso -->
+          <ion-item>
+            <ion-label position="floating">Peso(Kg)</ion-label>
+            <ion-input formControlName="Peso" type="number"></ion-input>
+          </ion-item>
+          <!-- mensaje de error peso -->
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Peso?.errors?.required" 
+          color="danger" 
+          class="ion-pading">la Peso es un campo requerido
+          </ion-label>
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Peso?.errors?.pattern" 
+          color="danger" 
+          class="ion-pading">Formato invalido
+          </ion-label>
+          <!-- input edad -->
+          <ion-item>
+            <ion-label position="floating">Edad</ion-label>
+            <ion-input formControlName="Edad" type="number"></ion-input>
+          </ion-item>
+          <!-- mensajes de error Edad -->
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Edad?.errors?.required" 
+          color="danger" 
+          class="ion-pading">la edad es un campo requerido
+          </ion-label>
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Edad?.errors?.min" 
+          color="danger" 
+          class="ion-pading">La edad minima debe ser de 12 años
+          </ion-label>
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Edad?.errors?.max" 
+          color="danger" 
+          class="ion-pading">La edad maxima debe ser de 99 años
+          </ion-label>
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Edad?.errors?.pattern" 
+          color="danger" 
+          class="ion-pading">Formato invalido
+          </ion-label>
+          <!-- input edad -->
+          <ion-item>
+            <ion-label position="floating">Estatura(CM)</ion-label>
+            <ion-input formControlName="Estatura" type="number"></ion-input>
+          </ion-item>
+          <!-- mensajes de error Estatura -->
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Estatura?.errors?.required" 
+          color="danger" 
+          class="ion-pading">la Estatura es un campo requerido
+          </ion-label>
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Estatura?.errors?.min" 
+          color="danger" 
+          class="ion-pading">La Estatura minima debe ser de 0.8 CM
+          </ion-label>
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Estatura?.errors?.max" 
+          color="danger" 
+          class="ion-pading">La Estatura minima debe ser de 210 Cm
+          </ion-label>
+          <ion-label 
+          *ngIf="isSubmitted && errorControl?.Estatura?.errors?.pattern" 
+          color="danger" 
+          class="ion-pading">Formato invalido
+          </ion-label>
+
+          <ion-button type="submit" expand="block">Listo</ion-button>
+        </form>
+        <ion-item *ngIf="listo">
+          <ion-label 
+          *ngIf="listo"  
+          class="ion-pading"
+          position="center">tu TDEE es de: {{TDEE_var}}
+          </ion-label>
+          
+        </ion-item>
+        <ion-item *ngIf="listo">
+          <ion-label 
+          class="ion-pading"
+          position="center">tu BMR es de:  {{BMRP}}
+          </ion-label>
+          
+        </ion-item>
+        
+        
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-grid>

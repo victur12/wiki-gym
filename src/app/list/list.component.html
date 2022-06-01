@@ -1,5 +1,5 @@
 <ion-content>
-  <ion-searchbar showCancelButton="focus"></ion-searchbar>
+  <ion-searchbar [(ngModel)]="term" showCancelButton="focus" cancelButtonText="Custom Cancel"></ion-searchbar>
   <ion-grid>
     
     <ion-chip outline color="tertiary">
@@ -22,7 +22,7 @@
     <ion-list>
       
       <ion-item>
-        <ion-card *ngFor="let excercise of exercises">
+        <ion-card *ngFor="let excercise of exercises |filter:term">
           <ion-card-header >
             <ion-img [src]="excercise.img"></ion-img>
             <ion-card-subtitle>{{excercise.type}}</ion-card-subtitle>

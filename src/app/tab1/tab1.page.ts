@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
+resultado:string="";
+peso:string="";
+altura:string=""
+
   constructor() {}
+
+  calcular(){
+    this.resultado=(parseFloat(this.peso) / (parseFloat(this.altura) * parseFloat(this.altura))).toString();
+  }
 
 }

@@ -7,7 +7,7 @@ import { Tab2Page } from './tab2.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
-import { FormTDEEComponentModule } from '../form-tdee/form-tdee.module';
+
 
 @NgModule({
   imports: [
@@ -15,8 +15,7 @@ import { FormTDEEComponentModule } from '../form-tdee/form-tdee.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab2PageRoutingModule,
-    FormTDEEComponentModule
+    Tab2PageRoutingModule
   ],
   declarations: [Tab2Page]
 })

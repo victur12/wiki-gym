@@ -1,0 +1,23 @@
+<ion-content>
+  <ion-searchbar [(ngModel)]="term" showCancelButton="focus" cancelButtonText="Custom Cancel"></ion-searchbar>
+
+    
+
+  <ion-list>
+    <ion-item *ngFor="let excercise of exercises |filter:term">
+      <ion-card>
+        <ion-card-header >
+          <ion-img [src]="excercise.img"></ion-img>
+          <ion-card-subtitle>{{excercise.type}}</ion-card-subtitle>
+          <ion-card-title>{{excercise.name}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          {{excercise.description}}
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

@@ -3,7 +3,7 @@
     <ion-col>
       <ion-list>
         <ion-list-header>
-          <ion-label>Calculadora de gasto calorico o TDEE</ion-label>
+          <ion-label>¿Que es Gasto calorico o TDEE?</ion-label>
         </ion-list-header>
 
         <form  [formGroup]="form" (ngSubmit)="calcular()">
@@ -143,7 +143,31 @@
           
         </ion-item>
         
-        
+      </ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-card>
+            <ion-card-header >
+              <ion-img src="https://www.researchgate.net/profile/Manuel-Garcia-33/publication/337655510/figure/fig4/AS:831138528497664@1575170275161/Katch-McArdle-Multipliers-for-Calculating-TDEE.png"></ion-img>
+              <ion-card-title>¿Que es el Gasto calorico (Total Daily Energy Expenditure)?</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              El TDEE es un término que hace referencia a lo que en inglés se conoce como ​Total Daily Energy Expenditure, ​es decir, el ​gasto calórico total​que tenemos en nuestro a día a día.
+            </ion-card-content>
+            <ion-card-content>
+              Este dato es súper importante porqué nos permite adoptar un punto de partida a la hora de pautar protocolos nutricionales enfocados a la pérdida de grasa o al volumen muscular, ya que a partir del número de calorías totales que gastamos en nuestro día a día después podemos aplicar un déficit o un superávit calórico correcto para cumplir con nuestros objetivos deportivos de pérdida de grasa o ganancia de masa muscular.
+            </ion-card-content>
+
+            <ion-card-header >
+              <ion-card-title>¿Que es el BMR?</ion-card-title>
+              <ion-img src=" https://www.thecalculatorsite.com/images/health/bmr-formula-mifflin-st-jeor.jpg"></ion-img>
+            </ion-card-header>
+            
+            <ion-card-content>
+              La ​tasa de metabolismo basal ​se define como ​aquel valor mínimo de energía necesaria para que nuestro organismo subsista en reposo. Esta energía mínima es utilizada por nuestras células en las​​reacciones químicas​intracelulares necesarias para la realización de​​funciones metabólicas​esenciales, como es el caso de la​​respiración​.El metabolismo basal depende de varios factores, como sexo, talla, peso, edad, etc. y es una propiedad de todo ser vivo. En humanos, un claro ejemplo del metabolismo basal es el caso del​estado en​​coma​.La persona «en coma», está inactiva, pero tiene un gasto mínimo de​​calorías​,razón por la que hay que seguir alimentando al organismo.
+            </ion-card-content>
+          </ion-card>
+        </ion-item>
       </ion-list>
     </ion-col>
   </ion-row>

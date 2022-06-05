@@ -10,18 +10,18 @@
           
           <!-- input peso -->
           <ion-item>
-            <ion-label color="medium "position="floating">Peso (Kg)</ion-label>
+            <ion-label color="medium" position="floating">Peso (Kg)</ion-label>
             <ion-input color="tertiary" formControlName="Peso" type="number"></ion-input>
           </ion-item>
           <!-- mensaje de error peso -->
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Peso?.errors?.required" 
-          color="danger" 
+          color="tertiary" 
           class="ion-pading">El peso es un campo requerido
           </ion-label>
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Peso?.errors?.pattern" 
-          color="danger" 
+          color="tertiary" 
           class="ion-pading">Formato invalido
           </ion-label>
           <!-- input Estatura -->
@@ -32,22 +32,22 @@
           <!-- mensajes de error Estatura -->
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Estatura?.errors?.required" 
-          color="danger" 
+          color="tertiary" 
           class="ion-pading">La estatura es un campo requerido
           </ion-label>
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Estatura?.errors?.min" 
-          color="danger" 
+          color="tertiary" 
           class="ion-pading">La estatura minima debe ser de 0.8 M
           </ion-label>
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Estatura?.errors?.max" 
-          color="danger" 
+          color="tertiary" 
           class="ion-pading">La Estatura máxima debe ser de 2.10 M
           </ion-label>
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Estatura?.errors?.pattern" 
-          color="danger" 
+          color="tertiary" 
           class="ion-pading">Formato invalido
           </ion-label>
 
@@ -58,7 +58,8 @@
           <ion-label 
           *ngIf="listo"  
           class="ion-pading"
-          position="center">Tu IMC es de: {{IMC_var | number:'2.1-2' }}
+          color="danger"
+          position="center"><h1>Tu IMC es de: {{IMC_var | number:'2.1-2' }}</h1>
           </ion-label>
         </ion-item>
         <ion-card>

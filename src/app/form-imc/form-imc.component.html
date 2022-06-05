@@ -3,15 +3,15 @@
     <ion-col>
       <ion-list>
         <ion-list-header>
-          <ion-label color="secondary">Calculadora de Indice de Masa Corporal IMC</ion-label>
+          <ion-label color="danger">Calculadora de Índice de Masa Corporal IMC</ion-label>
         </ion-list-header>
 
         <form  [formGroup]="form" (ngSubmit)="calcular()">
           
           <!-- input peso -->
           <ion-item>
-            <ion-label color="medium "position="floating">Peso(Kg)</ion-label>
-            <ion-input color="danger" formControlName="Peso" type="number"></ion-input>
+            <ion-label color="medium "position="floating">Peso (Kg)</ion-label>
+            <ion-input color="tertiary" formControlName="Peso" type="number"></ion-input>
           </ion-item>
           <!-- mensaje de error peso -->
           <ion-label 
@@ -26,7 +26,7 @@
           </ion-label>
           <!-- input Estatura -->
           <ion-item>
-            <ion-label color="medium" position="floating">Estatura(M)</ion-label>
+            <ion-label color="medium" position="floating">Estatura (M)</ion-label>
             <ion-input formControlName="Estatura" type="number"></ion-input>
           </ion-item>
           <!-- mensajes de error Estatura -->
@@ -61,7 +61,15 @@
           position="center">Tu IMC es de: {{IMC_var | number:'2.1-2' }}
           </ion-label>
         </ion-item>
-        
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title color="secondary">¿Qué es el IMC?</ion-card-title>
+          </ion-card-header>
+          
+          <ion-card-content>
+            El índice de masa corporal (IMC) es un número que se calcula con base en el peso y la estatura de la persona. Para la mayoría de las personas, el IMC es un indicador confiable de la gordura y se usa para identificar las categorías de peso que pueden llevar a problemas de salud.
+          </ion-card-content>
+        </ion-card>
       </ion-list>
     </ion-col>
   </ion-row>

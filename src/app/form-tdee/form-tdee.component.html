@@ -3,7 +3,7 @@
     <ion-col>
       <ion-list>
         <ion-list-header>
-          <ion-label>¿Que es Gasto calorico o TDEE?</ion-label>
+          <ion-label color="tertiary"><h1>¿Qué es Gasto calórico o TDEE? </h1></ion-label>
         </ion-list-header>
 
         <form  [formGroup]="form" (ngSubmit)="calcular()">
@@ -15,17 +15,17 @@
             <!-- hombre opcion 1 -->
             <ion-item>
               <ion-label>Hombre</ion-label>
-              <ion-radio slot="start" value="1"></ion-radio>
+              <ion-radio  color="success" slot="start" value="1"></ion-radio>
             </ion-item>
             <!-- mujer opcion 2 -->
             <ion-item>
               <ion-label>Mujer</ion-label>
-              <ion-radio slot="start" value="2"></ion-radio>
+              <ion-radio color="success" slot="start" value="2"></ion-radio>
             </ion-item>
           </ion-radio-group>
           <ion-label
           *ngIf="isSubmitted && errorControl?.SS?.errors?.required" 
-          color="danger" 
+          color="tertiary" 
           class="ion-pading">Este es un campo requerido
         </ion-label>
         <!-- input radius estilo de vida -->
@@ -36,96 +36,96 @@
             <!-- opcion 1 -->
             <ion-item>
               <ion-label>Estilo de vida sedentario o ligero</ion-label>
-              <ion-radio slot="start" value="1"></ion-radio>
+              <ion-radio color="success" slot="start" value="1"></ion-radio>
             </ion-item>
             <!-- opcion 2 -->
             <ion-item>
               <ion-label>Estilo de vida activo o moderadamente activo</ion-label>
-              <ion-radio slot="start" value="2"></ion-radio>
+              <ion-radio color="success" slot="start" value="2"></ion-radio>
             </ion-item>
             <!-- opcion 3 -->
             <ion-item>
               <ion-label>Estilo de vida muy activo o intenso</ion-label>
-              <ion-radio slot="start" value="3"></ion-radio>
+              <ion-radio color="success" slot="start" value="3"></ion-radio>
             </ion-item>
 
           </ion-radio-group>
           <!-- error radius -->
           <ion-label 
           *ngIf="isSubmitted && errorControl?.SL?.errors?.required" 
-          color="danger" 
+          color="tertiary" 
           class="ion-pading">Este es un campo requerido
           </ion-label>
           <!-- input peso -->
           <ion-item>
-            <ion-label position="floating">Peso(Kg)</ion-label>
+            <ion-label color="medium" position="floating">Peso (Kg)</ion-label>
             <ion-input formControlName="Peso" type="number"></ion-input>
           </ion-item>
           <!-- mensaje de error peso -->
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Peso?.errors?.required" 
-          color="danger" 
-          class="ion-pading">la Peso es un campo requerido
+          color="tertiary" 
+          class="ion-pading">El Peso es un campo requerido
           </ion-label>
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Peso?.errors?.pattern" 
-          color="danger" 
+          color="tertiary" 
           class="ion-pading">Formato invalido
           </ion-label>
           <!-- input edad -->
           <ion-item>
-            <ion-label position="floating">Edad</ion-label>
+            <ion-label color="medium" position="floating">Edad</ion-label>
             <ion-input formControlName="Edad" type="number"></ion-input>
           </ion-item>
           <!-- mensajes de error Edad -->
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Edad?.errors?.required" 
-          color="danger" 
-          class="ion-pading">la edad es un campo requerido
+          color="tertiary" 
+          class="ion-pading">La edad es un campo requerido
           </ion-label>
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Edad?.errors?.min" 
-          color="danger" 
+          color="tertiary" 
           class="ion-pading">La edad minima debe ser de 12 años
           </ion-label>
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Edad?.errors?.max" 
-          color="danger" 
+          color="tertiary" 
           class="ion-pading">La edad maxima debe ser de 99 años
           </ion-label>
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Edad?.errors?.pattern" 
-          color="danger" 
+          color="tertiary" 
           class="ion-pading">Formato invalido
           </ion-label>
           <!-- input edad -->
           <ion-item>
-            <ion-label position="floating">Estatura(CM)</ion-label>
+            <ion-label color="medium" position="floating">Estatura (CM)</ion-label>
             <ion-input formControlName="Estatura" type="number"></ion-input>
           </ion-item>
           <!-- mensajes de error Estatura -->
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Estatura?.errors?.required" 
-          color="danger" 
-          class="ion-pading">la Estatura es un campo requerido
+          color="tertiary" 
+          class="ion-pading">La Estatura es un campo requerido
           </ion-label>
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Estatura?.errors?.min" 
-          color="danger" 
+          color="tertiary" 
           class="ion-pading">La Estatura minima debe ser de 0.8 CM
           </ion-label>
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Estatura?.errors?.max" 
-          color="danger" 
+          color="tertiary" 
           class="ion-pading">La Estatura minima debe ser de 210 Cm
           </ion-label>
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Estatura?.errors?.pattern" 
-          color="danger" 
+          color="tertiary" 
           class="ion-pading">Formato invalido
           </ion-label>
 
-          <ion-button color="tertiary" size="large" type="submit" expand="block" shape="round" >Listo</ion-button>
+          <ion-button color="primary" size="large" type="submit" expand="block" shape="round" >Listo</ion-button>
         </form>
         <ion-item *ngIf="listo">
           <ion-label 
@@ -149,7 +149,7 @@
           <ion-card>
             <ion-card-header >
               <ion-img src="https://www.researchgate.net/profile/Manuel-Garcia-33/publication/337655510/figure/fig4/AS:831138528497664@1575170275161/Katch-McArdle-Multipliers-for-Calculating-TDEE.png"></ion-img>
-              <ion-card-title>¿Que es el Gasto calorico (Total Daily Energy Expenditure)?</ion-card-title>
+              <ion-card-title color="tertiary">¿Que es el Gasto calorico (Total Daily Energy Expenditure)?</ion-card-title>
             </ion-card-header>
             <ion-card-content>
               El TDEE es un término que hace referencia a lo que en inglés se conoce como ​Total Daily Energy Expenditure, ​es decir, el ​gasto calórico total​que tenemos en nuestro a día a día.
@@ -159,7 +159,7 @@
             </ion-card-content>
 
             <ion-card-header >
-              <ion-card-title>¿Que es el BMR?</ion-card-title>
+              <ion-card-title color="tertiary">¿Que es el BMR?</ion-card-title>
               <ion-img src=" https://www.thecalculatorsite.com/images/health/bmr-formula-mifflin-st-jeor.jpg"></ion-img>
             </ion-card-header>
             

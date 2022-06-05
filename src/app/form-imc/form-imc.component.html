@@ -3,15 +3,15 @@
     <ion-col>
       <ion-list>
         <ion-list-header>
-          <ion-label>Calculadora de Indice de Masa Corporal IMC</ion-label>
+          <ion-label color="secondary">Calculadora de Indice de Masa Corporal IMC</ion-label>
         </ion-list-header>
 
         <form  [formGroup]="form" (ngSubmit)="calcular()">
           
           <!-- input peso -->
           <ion-item>
-            <ion-label position="floating">Peso(Kg)</ion-label>
-            <ion-input formControlName="Peso" type="number"></ion-input>
+            <ion-label color="medium "position="floating">Peso(Kg)</ion-label>
+            <ion-input color="danger" formControlName="Peso" type="number"></ion-input>
           </ion-item>
           <!-- mensaje de error peso -->
           <ion-label 
@@ -26,7 +26,7 @@
           </ion-label>
           <!-- input Estatura -->
           <ion-item>
-            <ion-label position="floating">Estatura(M)</ion-label>
+            <ion-label color="medium" position="floating">Estatura(M)</ion-label>
             <ion-input formControlName="Estatura" type="number"></ion-input>
           </ion-item>
           <!-- mensajes de error Estatura -->
@@ -51,7 +51,7 @@
           class="ion-pading">Formato invalido
           </ion-label>
 
-          <ion-button type="submit" expand="block">Listo</ion-button>
+          <ion-button color="primary" size="large" type="submit" expand="block" shape="round" >Listo</ion-button>
           
         </form>
         <ion-item *ngIf="listo">

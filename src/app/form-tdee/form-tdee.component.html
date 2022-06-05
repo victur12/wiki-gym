@@ -58,6 +58,11 @@
           </ion-label>
           <!-- input peso -->
           <ion-item>
+            <ion-buttons slot="end">
+              <ion-button>
+                <ion-icon name="speedometer-outline"></ion-icon>
+              </ion-button>
+            </ion-buttons>
             <ion-label color="medium" position="floating">Peso (Kg)</ion-label>
             <ion-input formControlName="Peso" type="number"></ion-input>
           </ion-item>
@@ -74,6 +79,11 @@
           </ion-label>
           <!-- input edad -->
           <ion-item>
+            <ion-buttons slot="end">
+              <ion-button>
+                <ion-icon name="calendar-outline"></ion-icon>
+              </ion-button>
+            </ion-buttons>
             <ion-label color="medium" position="floating">Edad</ion-label>
             <ion-input formControlName="Edad" type="number"></ion-input>
           </ion-item>
@@ -100,6 +110,11 @@
           </ion-label>
           <!-- input edad -->
           <ion-item>
+            <ion-buttons slot="end">
+              <ion-button>
+                <ion-icon name="accessibility-outline"></ion-icon>
+              </ion-button>
+            </ion-buttons>
             <ion-label color="medium" position="floating">Estatura (CM)</ion-label>
             <ion-input formControlName="Estatura" type="number"></ion-input>
           </ion-item>
@@ -131,14 +146,16 @@
           <ion-label 
           *ngIf="listo"  
           class="ion-pading"
-          position="center">tu TDEE es de: {{TDEE_var}}
+          color="danger"
+          position="center"><h1>Tu TDEE es de: {{TDEE_var}}</h1>
           </ion-label>
           
         </ion-item>
         <ion-item *ngIf="listo">
           <ion-label 
           class="ion-pading"
-          position="center">tu BMR es de:  {{BMRP}}
+          color="danger"
+          position="center"><h1>Tu BMR es de:  {{BMRP}}</h1>
           </ion-label>
           
         </ion-item>
@@ -149,13 +166,17 @@
           <ion-card>
             <ion-card-header>
               <ion-img src="https://www.researchgate.net/profile/Manuel-Garcia-33/publication/337655510/figure/fig4/AS:831138528497664@1575170275161/Katch-McArdle-Multipliers-for-Calculating-TDEE.png"></ion-img>
-              <ion-card-title color="success"><h2>¿Que es el Gasto calorico (Total Daily Energy Expenditure)?</h2></ion-card-title>
+              <ion-card-title color="success"><h2>¿Que es el Gasto calórico (Total Daily Energy Expenditure)?</h2></ion-card-title>
             </ion-card-header>
             <ion-card-content>
+              <div class="ion-text-justify">
               El TDEE es un término que hace referencia a lo que en inglés se conoce como ​Total Daily Energy Expenditure, ​es decir, el ​gasto calórico total​que tenemos en nuestro a día a día.
+              </div>
             </ion-card-content>
             <ion-card-content>
+              <div class="ion-text-justify">
               Este dato es súper importante porqué nos permite adoptar un punto de partida a la hora de pautar protocolos nutricionales enfocados a la pérdida de grasa o al volumen muscular, ya que a partir del número de calorías totales que gastamos en nuestro día a día después podemos aplicar un déficit o un superávit calórico correcto para cumplir con nuestros objetivos deportivos de pérdida de grasa o ganancia de masa muscular.
+              </div>
             </ion-card-content>
 
             <ion-card-header >
@@ -164,7 +185,9 @@
             </ion-card-header>
             
             <ion-card-content>
-              La ​tasa de metabolismo basal <ion-text color="danger">​se define como</ion-text> ​aquel valor mínimo de energía necesaria para que nuestro organismo subsista en reposo. Esta energía mínima es utilizada por nuestras células en las​​reacciones químicas​intracelulares necesarias para la realización de​​funciones metabólicas​esenciales, como es el caso de la​​respiración​.El metabolismo basal depende de varios factores, como sexo, talla, peso, edad, etc. y es una propiedad de todo ser vivo. En humanos, un claro ejemplo del metabolismo basal es el caso del​estado en​​coma​.La persona «en coma», está inactiva, pero tiene un gasto mínimo de​​calorías​,razón por la que hay que seguir alimentando al organismo.
+              <div class="ion-text-justify">
+              La ​tasa de metabolismo basal se define como ​aquel valor mínimo de energía necesaria para que nuestro organismo subsista en reposo. Esta energía mínima es utilizada por nuestras células en las ​​reacciones químicas ​intracelulares necesarias para la realización de ​​funciones metabólicas​ esenciales, como es el caso de la​​ respiración​.<br> El metabolismo basal depende de varios factores, como sexo, talla, peso, edad, etc. y es una propiedad de todo ser vivo. En humanos, un claro ejemplo del metabolismo basal es el caso del ​estado en ​​coma​. <br>La persona «en coma», está inactiva, pero tiene un gasto mínimo de ​​calorías​, razón por la que hay que seguir alimentando al organismo.
+              </div>
             </ion-card-content>
           </ion-card>
         </ion-item>

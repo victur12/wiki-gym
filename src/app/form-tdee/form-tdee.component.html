@@ -1,13 +1,14 @@
-<ion-grid>
-  <ion-row>
-    <ion-col>
-      <ion-list>
-        <ion-list-header>
-          <ion-label color="success"><h1>¿Qué es Gasto calórico o TDEE? </h1></ion-label>
-        </ion-list-header>
-
-        <form  [formGroup]="form" (ngSubmit)="calcular()">
-          <!-- input radius Sexo-->
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-list-header>
+            <ion-label color="success"><h1>¿Qué es Gasto calórico o TDEE? </h1></ion-label>
+          </ion-list-header>
+          
+          <form  [formGroup]="form" (ngSubmit)="calcular()">
+            <!-- input radius Sexo-->
           <ion-radio-group value="Sex"  formControlName="SS"  [(ngModel)]="selectedSex">
             <ion-list-header>
               <ion-label>Sexo</ion-label>
@@ -29,11 +30,11 @@
           class="ion-pading">Este es un campo requerido
         </ion-label>
         <!-- input radius estilo de vida -->
-          <ion-radio-group formControlName="SL" value="Life" [(ngModel)]="selectedLifeStile">
-            <ion-list-header position="floating">
-              <ion-label>¿Cómo considera que es su estilo de vida?</ion-label>
-            </ion-list-header>
-            <!-- opcion 1 -->
+        <ion-radio-group formControlName="SL" value="Life" [(ngModel)]="selectedLifeStile">
+          <ion-list-header position="floating">
+            <ion-label>¿Cómo considera que es su estilo de vida?</ion-label>
+          </ion-list-header>
+          <!-- opcion 1 -->
             <ion-item>
               <ion-label>Estilo de vida sedentario o ligero</ion-label>
               <ion-radio color="success" slot="start" value="1"></ion-radio>
@@ -48,16 +49,16 @@
               <ion-label>Estilo de vida muy activo o intenso</ion-label>
               <ion-radio color="success" slot="start" value="3"></ion-radio>
             </ion-item>
-
+            
           </ion-radio-group>
           <!-- error radius -->
           <ion-label 
           *ngIf="isSubmitted && errorControl?.SL?.errors?.required" 
           color="tertiary" 
           class="ion-pading">Este es un campo requerido
-          </ion-label>
-          <!-- input peso -->
-          <ion-item>
+        </ion-label>
+        <!-- input peso -->
+        <ion-item>
             <ion-buttons slot="end">
               <ion-button>
                 <ion-icon name="speedometer-outline"></ion-icon>
@@ -71,127 +72,129 @@
           *ngIf="isSubmitted && errorControl?.Peso?.errors?.required" 
           color="tertiary" 
           class="ion-pading">El Peso es un campo requerido
-          </ion-label>
-          <ion-label 
-          *ngIf="isSubmitted && errorControl?.Peso?.errors?.pattern" 
-          color="tertiary" 
-          class="ion-pading">Formato invalido
-          </ion-label>
-          <!-- input edad -->
-          <ion-item>
-            <ion-buttons slot="end">
-              <ion-button>
-                <ion-icon name="calendar-outline"></ion-icon>
-              </ion-button>
-            </ion-buttons>
-            <ion-label color="medium" position="floating">Edad</ion-label>
-            <ion-input formControlName="Edad" type="number"></ion-input>
-          </ion-item>
-          <!-- mensajes de error Edad -->
-          <ion-label 
-          *ngIf="isSubmitted && errorControl?.Edad?.errors?.required" 
-          color="tertiary" 
-          class="ion-pading">La edad es un campo requerido
-          </ion-label>
-          <ion-label 
-          *ngIf="isSubmitted && errorControl?.Edad?.errors?.min" 
-          color="tertiary" 
-          class="ion-pading">La edad minima debe ser de 12 años
-          </ion-label>
-          <ion-label 
-          *ngIf="isSubmitted && errorControl?.Edad?.errors?.max" 
-          color="tertiary" 
-          class="ion-pading">La edad maxima debe ser de 99 años
-          </ion-label>
-          <ion-label 
-          *ngIf="isSubmitted && errorControl?.Edad?.errors?.pattern" 
-          color="tertiary" 
-          class="ion-pading">Formato invalido
-          </ion-label>
-          <!-- input edad -->
-          <ion-item>
-            <ion-buttons slot="end">
-              <ion-button>
-                <ion-icon name="accessibility-outline"></ion-icon>
-              </ion-button>
-            </ion-buttons>
-            <ion-label color="medium" position="floating">Estatura (CM)</ion-label>
-            <ion-input formControlName="Estatura" type="number"></ion-input>
-          </ion-item>
-          <!-- mensajes de error Estatura -->
+        </ion-label>
+        <ion-label 
+        *ngIf="isSubmitted && errorControl?.Peso?.errors?.pattern" 
+        color="tertiary" 
+        class="ion-pading">Formato invalido
+      </ion-label>
+      <!-- input edad -->
+      <ion-item>
+        <ion-buttons slot="end">
+          <ion-button>
+            <ion-icon name="calendar-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label color="medium" position="floating">Edad</ion-label>
+        <ion-input formControlName="Edad" type="number"></ion-input>
+      </ion-item>
+      <!-- mensajes de error Edad -->
+      <ion-label 
+      *ngIf="isSubmitted && errorControl?.Edad?.errors?.required" 
+      color="tertiary" 
+      class="ion-pading">La edad es un campo requerido
+    </ion-label>
+    <ion-label 
+    *ngIf="isSubmitted && errorControl?.Edad?.errors?.min" 
+    color="tertiary" 
+    class="ion-pading">La edad minima debe ser de 12 años
+  </ion-label>
+  <ion-label 
+  *ngIf="isSubmitted && errorControl?.Edad?.errors?.max" 
+  color="tertiary" 
+  class="ion-pading">La edad maxima debe ser de 99 años
+</ion-label>
+<ion-label 
+*ngIf="isSubmitted && errorControl?.Edad?.errors?.pattern" 
+color="tertiary" 
+class="ion-pading">Formato invalido
+</ion-label>
+<!-- input edad -->
+<ion-item>
+  <ion-buttons slot="end">
+    <ion-button>
+      <ion-icon name="accessibility-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-label color="medium" position="floating">Estatura (CM)</ion-label>
+  <ion-input formControlName="Estatura" type="number"></ion-input>
+</ion-item>
+<!-- mensajes de error Estatura -->
           <ion-label 
           *ngIf="isSubmitted && errorControl?.Estatura?.errors?.required" 
           color="tertiary" 
           class="ion-pading">La Estatura es un campo requerido
-          </ion-label>
-          <ion-label 
-          *ngIf="isSubmitted && errorControl?.Estatura?.errors?.min" 
-          color="tertiary" 
-          class="ion-pading">La Estatura minima debe ser de 0.8 CM
-          </ion-label>
-          <ion-label 
-          *ngIf="isSubmitted && errorControl?.Estatura?.errors?.max" 
-          color="tertiary" 
-          class="ion-pading">La Estatura minima debe ser de 210 Cm
-          </ion-label>
-          <ion-label 
-          *ngIf="isSubmitted && errorControl?.Estatura?.errors?.pattern" 
-          color="tertiary" 
-          class="ion-pading">Formato invalido
-          </ion-label>
+        </ion-label>
+        <ion-label 
+        *ngIf="isSubmitted && errorControl?.Estatura?.errors?.min" 
+        color="tertiary" 
+        class="ion-pading">La Estatura minima debe ser de 0.8 CM
+      </ion-label>
+      <ion-label 
+      *ngIf="isSubmitted && errorControl?.Estatura?.errors?.max" 
+      color="tertiary" 
+      class="ion-pading">La Estatura minima debe ser de 210 Cm
+    </ion-label>
+    <ion-label 
+    *ngIf="isSubmitted && errorControl?.Estatura?.errors?.pattern" 
+    color="tertiary" 
+    class="ion-pading">Formato invalido
+  </ion-label>
+  
+  <ion-button color="primary" size="large" type="submit" expand="block" shape="round" >Listo</ion-button>
+</form>
+<ion-item *ngIf="listo">
+  <ion-label 
+  *ngIf="listo"  
+  class="ion-pading"
+  color="danger"
+  position="center"><h1>Tu TDEE es de: {{TDEE_var}}</h1>
+</ion-label>
 
-          <ion-button color="primary" size="large" type="submit" expand="block" shape="round" >Listo</ion-button>
-        </form>
-        <ion-item *ngIf="listo">
-          <ion-label 
-          *ngIf="listo"  
-          class="ion-pading"
-          color="danger"
-          position="center"><h1>Tu TDEE es de: {{TDEE_var}}</h1>
-          </ion-label>
-          
-        </ion-item>
-        <ion-item *ngIf="listo">
-          <ion-label 
-          class="ion-pading"
-          color="danger"
-          position="center"><h1>Tu BMR es de:  {{BMRP}}</h1>
-          </ion-label>
-          
-        </ion-item>
-        
-      </ion-list>
-      <ion-list>
-        <ion-item>
-          <ion-card>
-            <ion-card-header>
-              <ion-img src="https://www.researchgate.net/profile/Manuel-Garcia-33/publication/337655510/figure/fig4/AS:831138528497664@1575170275161/Katch-McArdle-Multipliers-for-Calculating-TDEE.png"></ion-img>
-              <ion-card-title color="success"><h2>¿Que es el Gasto calórico (Total Daily Energy Expenditure)?</h2></ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              <div class="ion-text-justify">
-              El TDEE es un término que hace referencia a lo que en inglés se conoce como ​Total Daily Energy Expenditure, ​es decir, el ​gasto calórico total​que tenemos en nuestro a día a día.
-              </div>
-            </ion-card-content>
-            <ion-card-content>
-              <div class="ion-text-justify">
-              Este dato es súper importante porqué nos permite adoptar un punto de partida a la hora de pautar protocolos nutricionales enfocados a la pérdida de grasa o al volumen muscular, ya que a partir del número de calorías totales que gastamos en nuestro día a día después podemos aplicar un déficit o un superávit calórico correcto para cumplir con nuestros objetivos deportivos de pérdida de grasa o ganancia de masa muscular.
-              </div>
-            </ion-card-content>
+</ion-item>
+<ion-item *ngIf="listo">
+  <ion-label 
+  class="ion-pading"
+  color="danger"
+  position="center"><h1>Tu BMR es de:  {{BMRP}}</h1>
+</ion-label>
 
-            <ion-card-header >
-              <ion-card-title color="success"><h2>¿Que es el BMR?</h2></ion-card-title>
-              <ion-img src=" https://www.thecalculatorsite.com/images/health/bmr-formula-mifflin-st-jeor.jpg"></ion-img>
-            </ion-card-header>
-            
-            <ion-card-content>
-              <div class="ion-text-justify">
-              La ​tasa de metabolismo basal se define como ​aquel valor mínimo de energía necesaria para que nuestro organismo subsista en reposo. Esta energía mínima es utilizada por nuestras células en las ​​reacciones químicas ​intracelulares necesarias para la realización de ​​funciones metabólicas​ esenciales, como es el caso de la​​ respiración​.<br> El metabolismo basal depende de varios factores, como sexo, talla, peso, edad, etc. y es una propiedad de todo ser vivo. En humanos, un claro ejemplo del metabolismo basal es el caso del ​estado en ​​coma​. <br>La persona «en coma», está inactiva, pero tiene un gasto mínimo de ​​calorías​, razón por la que hay que seguir alimentando al organismo.
-              </div>
-            </ion-card-content>
-          </ion-card>
-        </ion-item>
-      </ion-list>
-    </ion-col>
-  </ion-row>
+</ion-item>
+
+</ion-list>
+<ion-list>
+  <ion-item lines="none" color="none">
+    <ion-card lines="none" color="none">
+      <ion-card-header>
+        <ion-img src="https://www.researchgate.net/profile/Manuel-Garcia-33/publication/337655510/figure/fig4/AS:831138528497664@1575170275161/Katch-McArdle-Multipliers-for-Calculating-TDEE.png"></ion-img>
+        <ion-card-title color="success"><h2>¿Que es el Gasto calórico (Total Daily Energy Expenditure)?</h2></ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="ion-text-justify">
+          El TDEE es un término que hace referencia a lo que en inglés se conoce como ​Total Daily Energy Expenditure, ​es decir, el ​gasto calórico total​que tenemos en nuestro a día a día.
+        </div>
+      </ion-card-content>
+      <ion-card-content>
+        <div class="ion-text-justify">
+          Este dato es súper importante porqué nos permite adoptar un punto de partida a la hora de pautar protocolos nutricionales enfocados a la pérdida de grasa o al volumen muscular, ya que a partir del número de calorías totales que gastamos en nuestro día a día después podemos aplicar un déficit o un superávit calórico correcto para cumplir con nuestros objetivos deportivos de pérdida de grasa o ganancia de masa muscular.
+        </div>
+      </ion-card-content>
+      
+      <ion-card-header >
+        <ion-card-title color="success"><h2>¿Que es el BMR?</h2></ion-card-title>
+        <ion-img src=" https://www.thecalculatorsite.com/images/health/bmr-formula-mifflin-st-jeor.jpg"></ion-img>
+      </ion-card-header>
+      
+      <ion-card-content>
+        <div class="ion-text-justify">
+          La ​tasa de metabolismo basal se define como ​aquel valor mínimo de energía necesaria para que nuestro organismo subsista en reposo. Esta energía mínima es utilizada por nuestras células en las ​​reacciones químicas ​intracelulares necesarias para la realización de ​​funciones metabólicas​ esenciales, como es el caso de la​​ respiración​.<br> El metabolismo basal depende de varios factores, como sexo, talla, peso, edad, etc. y es una propiedad de todo ser vivo. En humanos, un claro ejemplo del metabolismo basal es el caso del ​estado en ​​coma​. <br>La persona «en coma», está inactiva, pero tiene un gasto mínimo de ​​calorías​, razón por la que hay que seguir alimentando al organismo.
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+</ion-list>
+</ion-col>
+</ion-row>
 </ion-grid>
+
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-content color="secondary">
+  <ion-header color="none">
+    <ion-toolbar color="none" >
+      <ion-buttons slot="start">
+        <ion-button (click)="exit()" color="primary">
+          <ion-icon name="chevron-back-outline"></ion-icon> 
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Ejercicios</ion-title>
+    </ion-toolbar>
+    <ion-img [src]="ejercicio.img"></ion-img>
+
+  </ion-header>
+
+  <ion-card color="">
+    <ion-card-header >
+      <ion-card-title>{{ejercicio.name}}</ion-card-title>
+      <ion-card-subtitle>{{ejercicio.type}}, {{ejercicio.equipment}}, </ion-card-subtitle>
+      <ion-card-subtitle>{{ejercicio.muscle}}, {{ejercicio.impact}}</ion-card-subtitle>
+    </ion-card-header>
+    
+    <ion-card-content class="ion-text-justify">
+
+        {{ejercicio.description}}
+    
+    </ion-card-content>    
+  
+    <ion-button (click)="exit()"  expand="block" size="large" color="secondary">
+      <ion-icon name="chevron-back-outline" color="primary" slot="start"></ion-icon> 
+      Atras
+    </ion-button>
+  </ion-card>
+
+
+</ion-content>

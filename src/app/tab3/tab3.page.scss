@@ -1,0 +1,19 @@
+ion-header{
+    -webkit-padding-start: 2rem;
+    -webkit-padding-end: 2rem;
+    --box-shadow: none !important;
+    padding-top: 1rem;
+    position: static;
+}
+
+ion-toolbar{
+    --box-shadow: none !important;
+}
+
+ion-title{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-left: 0px !important;
+    padding: 0px;
+    padding-bottom: .5rem !important;
+}

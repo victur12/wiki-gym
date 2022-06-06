@@ -1,22 +1,43 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="secondary">
-    <ion-buttons slot="start">
-      <ion-button>
-        <ion-icon name="barbell-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-title>
+<ion-header >
+  <ion-toolbar color="none">
+    <ion-title color="medium"> 
+    <ion-icon name="barbell-outline"></ion-icon>
       Wiki
     </ion-title>
+    <ion-searchbar [(ngModel)]="term" showCancelButton="focus" cancelButtonText="Custom Cancel" placeholder="Buscar" color="vicsearchbar" ></ion-searchbar>
   </ion-toolbar>
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content >
+  <h1>Ejercicios</h1>
+  <ion-grid>
+    <ion-row >
+      <ion-col *ngFor="let exercise of exercises |filter:term" >
+        <ion-item lines="none" color="none" (click)="openModal(exercise)">
+          <ion-card color="">
+            <ion-card-header >
+              <ion-img [src]="exercise.img"></ion-img>
+              <ion-card-title>{{exercise.name}}</ion-card-title>
+              <ion-card-subtitle>{{exercise.type}}</ion-card-subtitle>
+            </ion-card-header>
+            
+            <ion-card-content>
+              <!-- {{exercise.description}} -->
+            </ion-card-content>      
+          </ion-card>
 
-  <app-list></app-list>
+          <ion-buttons>
+            <ion-button color="tertiary" icon>
+              <ion-fab-button color="secondary" >
+                <ion-icon name="add"></ion-icon>
+              </ion-fab-button>
+            </ion-button>
+          </ion-buttons>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
 </ion-content>

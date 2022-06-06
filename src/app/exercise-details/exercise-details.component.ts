@@ -14,15 +14,10 @@ export class ExerciseDetailsComponent implements OnInit {
     private modalCtrl: ModalController
   ) { }
 
-  ngOnInit() {
-  console.log(this.ejercicio);
-
-  }
+  ngOnInit() {  }
 
   exit(){
     this.modalCtrl.dismiss();
-    console.log(this.ejercicio);
-
   }
 
 }

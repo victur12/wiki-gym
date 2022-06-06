@@ -65,6 +65,7 @@ ion-card{
 ion-item{
     position: relative;
     z-index:1 !important;
+    max-width: 200px;
 }
 ion-img{
   width: 80% !important;

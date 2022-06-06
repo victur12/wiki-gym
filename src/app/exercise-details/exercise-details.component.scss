@@ -27,7 +27,8 @@ ion-card-content{
     font-size: 1rem;
 }
 ion-card{
-    height: 55%;
+    min-height: 55%;
+    height: auto;
     width: 100%;
     position: absolute;
     bottom: 0;

@@ -35,7 +35,7 @@
                   <ion-icon name="accessibility-outline"></ion-icon>
                 </ion-button>
               </ion-buttons>
-              <ion-label color="medium" position="floating">Estatura (M)</ion-label>
+              <ion-label color="medium" position="floating">Estatura (CM)</ion-label>
               <ion-input formControlName="Estatura" type="number"></ion-input>
             </ion-item>
             <!-- mensajes de error Estatura -->
@@ -43,10 +43,10 @@
               class="ion-pading">La estatura es un campo requerido
             </ion-label>
             <ion-label *ngIf="isSubmitted && errorControl?.Estatura?.errors?.min" color="tertiary" class="ion-pading">La
-              estatura minima debe ser de 0.8 M
+              estatura minima debe ser de 80 cm
             </ion-label>
             <ion-label *ngIf="isSubmitted && errorControl?.Estatura?.errors?.max" color="tertiary" class="ion-pading">La
-              Estatura máxima debe ser de 2.10 M
+              Estatura máxima debe ser de 210 cm
             </ion-label>
             <ion-label *ngIf="isSubmitted && errorControl?.Estatura?.errors?.pattern" color="tertiary"
               class="ion-pading">Formato invalido

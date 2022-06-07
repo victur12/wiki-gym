@@ -25,7 +25,7 @@ export class FormImcComponent implements OnInit {
   ngOnInit() {
     this.form = this.formBuilder.group({
       Peso: ['', [Validators.required, Validators.min(20), Validators.max(150), Validators.pattern('^[0-9]+$')]],
-      Estatura: ['', [Validators.required, Validators.min(0.80), Validators.max(2.10), Validators.pattern(/^[0-9]+(\.[0-9]{1,2})?$/)]]
+      Estatura: ['', [Validators.required, Validators.min(80), Validators.max(210), Validators.pattern(/^[0-9]+(\.[0-9]{1,2})?$/)]]
     });
   }
 
@@ -38,7 +38,7 @@ export class FormImcComponent implements OnInit {
       return false;
     } else {
 
-      this.IMC_var = (this.form.value.Peso) / (this.form.value.Estatura * this.form.value.Estatura);
+      this.IMC_var = (this.form.value.Peso) / ((this.form.value.Estatura / 100) * (this.form.value.Estatura / 100));
       this.listo = true;
 
       console.log("Tu IMC es de: " + this.IMC_var);

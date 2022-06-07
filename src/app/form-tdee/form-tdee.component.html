@@ -162,21 +162,19 @@ class="ion-pading">Formato invalido
 </ion-item>
 
 </ion-list>
-<ion-list>
+
+<ion-button color="secondary" expand="block" (click)="info_display()">Más informacion  <ion-icon slot="end" name="alert-circle-outline"></ion-icon></ion-button>
+<ion-list id="info" *ngIf="display">
   <ion-item lines="none" color="none">
     <ion-card lines="none" color="none">
       <ion-card-header>
+        
         <ion-img src="https://www.researchgate.net/profile/Manuel-Garcia-33/publication/337655510/figure/fig4/AS:831138528497664@1575170275161/Katch-McArdle-Multipliers-for-Calculating-TDEE.png"></ion-img>
         <ion-card-title color="success"><h2>¿Que es el Gasto calórico (Total Daily Energy Expenditure)?</h2></ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <div class="ion-text-justify">
-          El TDEE es un término que hace referencia a lo que en inglés se conoce como ​Total Daily Energy Expenditure, ​es decir, el ​gasto calórico total​que tenemos en nuestro a día a día.
-        </div>
-      </ion-card-content>
-      <ion-card-content>
-        <div class="ion-text-justify">
-          Este dato es súper importante porqué nos permite adoptar un punto de partida a la hora de pautar protocolos nutricionales enfocados a la pérdida de grasa o al volumen muscular, ya que a partir del número de calorías totales que gastamos en nuestro día a día después podemos aplicar un déficit o un superávit calórico correcto para cumplir con nuestros objetivos deportivos de pérdida de grasa o ganancia de masa muscular.
+          El TDEE es un este dato es súper importante porqué nos permite adoptar un punto de partida a la hora de pautar protocolos nutricionales enfocados a la pérdida de grasa o al volumen muscular, ya que a partir del número de calorías totales que gastamos en nuestro día a día después podemos aplicar un déficit o un superávit calórico correcto para cumplir con nuestros objetivos deportivos de pérdida de grasa o ganancia de masa muscular.
         </div>
       </ion-card-content>
       

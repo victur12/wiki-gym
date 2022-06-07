@@ -18,6 +18,7 @@ export class FormTDEEComponent implements OnInit {
   listo = false;
   BMRP;
   TDEE_var;
+  display = true;
 
   get errorControl(){
     return this.form.controls;
@@ -31,6 +32,15 @@ export class FormTDEEComponent implements OnInit {
       Peso: ['', [Validators.required, Validators.min(20), Validators.max(150), Validators.pattern('^[0-9]+$')]],
       Estatura: ['', [Validators.required, Validators.min(80), Validators.max(220), Validators.pattern('^[0-9]+$')]]
     });
+  }
+
+
+  info_display(){
+    if (this.display) {
+      this.display = false;
+    } else {
+      this.display = true;
+    }
   }
 
   calcular(){

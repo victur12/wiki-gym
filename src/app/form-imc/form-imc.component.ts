@@ -29,6 +29,15 @@ export class FormImcComponent implements OnInit {
     });
   }
 
+  display = false;
+  info_display(){
+    if (this.display) {
+      this.display = false;
+    } else {
+      this.display = true;
+    }
+  }
+
   calcular(){
     
     

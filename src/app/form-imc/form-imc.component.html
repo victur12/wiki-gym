@@ -60,7 +60,10 @@
               <h1>Tu IMC es de: {{IMC_var | number:'2.1-2' }}</h1>
             </ion-label>
           </ion-item>
-          <ion-card>
+
+          <ion-button color="secondary" expand="block" (click)="info_display()">Más informacion  <ion-icon slot="end" name="alert-circle-outline"></ion-icon></ion-button>
+          
+          <ion-card id="info" *ngIf="display">
             <ion-card-header>
               <ion-card-title color="success">
                 <h2>¿Qué es el IMC?</h2>

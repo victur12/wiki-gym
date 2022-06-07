@@ -18,7 +18,6 @@ export class FormTDEEComponent implements OnInit {
   listo = false;
   BMRP;
   TDEE_var;
-  display = true;
 
   get errorControl(){
     return this.form.controls;
@@ -35,6 +34,7 @@ export class FormTDEEComponent implements OnInit {
   }
 
 
+  display = false;
   info_display(){
     if (this.display) {
       this.display = false;

@@ -44,3 +44,17 @@ ion-card{
     
  
 }
+@media only screen and (max-height: 900px) 
+ {
+    ion-card-title{
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+    ion-card-subtitle{
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    ion-card-content{
+        font-size: 0.8rem;
+    }
+}

@@ -30,11 +30,7 @@ ion-searchbar{
     margin-bottom: 1rem;
 }
 // icons
-.chip{
-    padding: 0.8rem;
-    border-radius: 1.5rem;
-    margin-bottom: 0.5rem;
-}
+
 
 ion-label{
     width: 100px;
@@ -65,7 +61,7 @@ ion-card{
 ion-item{
     position: relative;
     z-index:1 !important;
-    max-width: 200px;
+    max-width: 200px !important;
 }
 ion-img{
   width: 80% !important;
